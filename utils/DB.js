@@ -1,7 +1,7 @@
 const mysql = require('mysql'),
       async = require('async'),
       db = require('../config/db')
-let pool = mysql.createPool(db)
+let pool = mysql.createPool(db.mysql)
 
 pool.on('exit',()=>{
     pool.end()
