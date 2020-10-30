@@ -1,6 +1,7 @@
-const mysql = require('mysql'),
+const mysql = require('mysql2'),
       async = require('async'),
-      db = require('../config/db')
+      db = require('../config/db'),
+      _ = require('underscore')
 let pool = mysql.createPool(db.mysql)
 
 pool.on('exit',()=>{
